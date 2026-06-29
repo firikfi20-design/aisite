@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
-const API = '/api';
+const API = 'https://aisite-dnay.onrender.com/api';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
