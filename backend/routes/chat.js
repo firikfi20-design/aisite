@@ -30,7 +30,7 @@ async function callGroq(messages, stream = false) {
 // --- Helper: pick AI model by plan ---
 function getModelForPlan(plan) {
   if (plan === 'ultra') return 'gemini';  // could swap to paid GPT-4 later
-  return Math.random() > 0.5 ? 'gemini' : 'groq'; // load balance free models
+  return 'groq'; // load balance free models
 }
 
 // Get all chats for user
