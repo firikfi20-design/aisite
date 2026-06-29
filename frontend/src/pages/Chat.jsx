@@ -104,7 +104,7 @@ export default function Chat() {
 
   const messagesEndRef = useRef(null);
   const textareaRef = useRef(null);
-  const API = '/api';
+  const API = 'https://aisite-dnay.onrender.com/api';
 
   const scrollToBottom = () => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
 

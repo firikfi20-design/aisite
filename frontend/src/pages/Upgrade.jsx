@@ -52,7 +52,7 @@ export default function Upgrade() {
 
     try {
       if (payMethod === 'telegram') {
-        const res = await fetch('/api/payment/telegram/create', {
+        const res = await fetch('https://aisite-dnay.onrender.com/api/payment/telegram/create', {
           method: 'POST',
           headers: { Authorization: `Bearer ${getToken()}`, 'Content-Type': 'application/json' },
           body: JSON.stringify({ plan: selectedPlan })
@@ -64,7 +64,7 @@ export default function Upgrade() {
           setError('Не удалось создать счёт. Проверьте настройки Telegram бота.');
         }
       } else {
-        const res = await fetch('/api/payment/crypto/create', {
+        const res = await fetch('https://aisite-dnay.onrender.com/api/payment/crypto/create', {
           method: 'POST',
           headers: { Authorization: `Bearer ${getToken()}`, 'Content-Type': 'application/json' },
           body: JSON.stringify({ plan: selectedPlan, currency: cryptoCurrency })

@@ -1,4 +1,4 @@
-const BASE = '/api/admin';
+const BASE = 'https://aisite-dnay.onrender.com/api/admin';
 
 function headers() {
   return {
