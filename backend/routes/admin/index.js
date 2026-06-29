@@ -1,6 +1,6 @@
 import express from 'express';
-import { requireAdmin } from '../middleware/admin.js';
-import { query } from '../models/db.js';
+import { requireAdmin } from '../../../middleware/admin.js';
+import { query } from '../../models/db.js';
 
 const router = express.Router();
 router.use(requireAdmin);
