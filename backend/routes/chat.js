@@ -145,7 +145,7 @@ router.post('/:chatId/send', authenticate, checkRequestLimit, async (req, res) =
         }
       } else {
         // Gemini streaming
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
         const geminiMessages = messagesForAI
           .filter(m => m.role !== 'system')
           .map(m => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.content }] }));
